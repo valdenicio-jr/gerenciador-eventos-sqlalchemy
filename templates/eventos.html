@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Eventos+ | Eventos{% endblock title %}
+
+{% block conteudo %}
+
+    <h1>Eventos</h1>
+    <p class="subtitulo">Eventos cadastrados no sistema.</p>
+
+    <div class="lista">
+        {% for i in eventos %}
+            <article class="evento">
+                <h3>{{i.nome}}</h3>
+                <p>📅 {{i.data}}</p>
+                <p>📍 {{i.local}}</p>
+                <p>👥 {{i.quantidade_participantes}} participantes</p>
+                
+                <div>
+                    <a href="{{url_for('evento.detalhe', id=i.id_evento)}}">Detalhes</a>
+                    <a href="{{url_for('evento.editar', id=i.id_evento)}}">Editar</a>
+                </div>
+            </article>
+        {% endfor %}
+
+    </div>
+
+{% endblock conteudo %}

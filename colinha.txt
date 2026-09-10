@@ -1,0 +1,11 @@
+pip install flask-sqlalchemy
+
+flask db init
+
+flask db migrate -m "adicionando novo campo"
+
+flask db upgrade
+
+pip freeze > requirements.txt --> baixa o requirements
+
+pip install -r requirements.txt  --> instala as dependências
