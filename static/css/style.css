@@ -207,6 +207,10 @@ footer {
     color: var(--cinza);
 }
 
+.form-del{
+    display: none;
+}
+
 
 @media (max-width: 600px) {
     header .container {

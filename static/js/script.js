@@ -18,6 +18,8 @@ function excluir() {
     );
 
     if (confirmar) {
+        let form = document.getElementsByClassName("form-del")[0];
+        form.submit();
         alert("Evento excluído com sucesso!");
     }
 }
